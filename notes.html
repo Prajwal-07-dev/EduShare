@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>EduShare | Browse Notes</title>
+
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+
+    <a class="logo" href="index.html">
+      📚 EduShare
+    </a>
+
+    <div class="nav-links" id="navLinks"></div>
+
+    <a href="dashboard.html" class="nav-link">
+      🏠 Dashboard
+    </a>
+
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+
+    <h1>Browse Study Materials</h1>
+
+    <p class="muted">
+      Find notes shared by students.
+    </p>
+
+    <!-- Search and Filters -->
+    <div class="search-bar">
+
+      <!-- Search Notes -->
+      <input id="search" class="search-input" type="search" placeholder="Search title, subject, or keyword..."
+        oninput="filterNotes()">
+
+      <!-- Semester Filter -->
+      <select id="filterSemester" class="search-input" onchange="filterNotes()">
+        <option value="">All Semesters</option>
+        <option value="1">Semester 1</option>
+        <option value="2">Semester 2</option>
+        <option value="3">Semester 3</option>
+        <option value="4">Semester 4</option>
+        <option value="5">Semester 5</option>
+        <option value="6">Semester 6</option>
+        <option value="7">Semester 7</option>
+        <option value="8">Semester 8</option>
+      </select>
+
+
+      <!-- Branch Filter -->
+      <select id="branch" name="branch" class="search-input" onchange="filterNotes()">
+        <option value="">All Branches</option>
+        <option value="CSE">Computer Science (CSE)</option>
+        <option value="IT">Information Science (IS)</option>
+        <option value="ECE">Electronics and Communication (EC)</option>
+        <option value="IC">CSIOT</option>
+        <option value="MECH">Mechanical (MECH)</option>
+        <option value="CIVIL">Civil Engineering (CIVIL)</option>
+        <option value="CI">Computer Science AIML (CI)</option>
+      </select>
+
+      <!-- Category Filter -->
+      <select id="filterCategory" class="search-input" onchange="filterNotes()">
+        <option value="">All Categories</option>
+        <option>Notes</option>
+        <option>Question Papers</option>
+        <option>Lab Manuals</option>
+        <option>Assignments</option>
+      </select>
+
+    </div>
+
+    <!-- Notes Display -->
+    <section class="section">
+
+      <div class="card-grid" id="notesContainer"></div>
+
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    EduShare | Notes Library
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (typeof window.loadNotes === "function") {
+        window.loadNotes();
+      }
+    });
+  </script>
+
+</body>
+
+</html>
