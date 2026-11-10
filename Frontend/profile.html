@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Profile | EduShare</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="config.js"></script>
+  <script type="module" src="app.js"></script>
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a class="logo" href="index.html">📚 EduShare</a>
+
+    <div class="nav-links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="upload.html">Upload Notes</a>
+      <a href="notes.html">Browse Notes</a>
+      <a href="my-uploads.html">My Uploads</a>
+      <a href="profile.html">My Profile</a>
+    </div>
+  </nav>
+
+  <main class="profile-page">
+
+    <div class="page-heading">
+      <h1>My Profile 👋</h1>
+      <p>Manage your account and view your EduShare details.</p>
+    </div>
+
+    <section class="profile-card">
+
+      <div class="profile-banner"></div>
+
+      <div class="profile-content">
+
+        <div class="avatar" id="profileAvatar">👤</div>
+
+        <h2 class="profile-name" id="profileName">Loading...</h2>
+        <p class="profile-email" id="profileEmail"></p>
+
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          Signed in
+        </div>
+
+        <p id="profileMessage">Loading your account details...</p>
+
+        <div id="profileDetails" hidden>
+
+          <h3 class="details-heading">Account Information</h3>
+
+          <div class="details-grid">
+
+            <div class="detail-box">
+              <div class="detail-label">Full Name</div>
+              <div class="detail-value" id="detailName">—</div>
+            </div>
+
+            <div class="detail-box">
+              <div class="detail-label">Email Address</div>
+              <div class="detail-value" id="detailEmail">—</div>
+            </div>
+
+            <div class="detail-box">
+              <div class="detail-label">Sign-in Method</div>
+              <div class="detail-value" id="detailProvider">—</div>
+            </div>
+
+            <div class="detail-box">
+              <div class="detail-label">Member Since</div>
+              <div class="detail-value" id="detailSince">—</div>
+            </div>
+
+          </div>
+
+          <div class="profile-actions">
+            <a href="dashboard.html" class="profile-btn primary-btn">
+              ← Back to Dashboard
+            </a>
+
+            <button class="profile-btn logout-btn" id="logoutBtn">
+              Log Out
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>© EduShare | Learn. Share. Grow. 📚</footer>
+
+</body>
+</html>
